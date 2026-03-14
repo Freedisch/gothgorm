@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-func generateToken(prefix string)(raw, hash, displayPrefix string, err error) {
+func generateToken(prefix string) (raw, hash, displayPrefix string, err error) {
 	b := make([]byte, 32)
 	if _, err = rand.Read(b); err != nil {
 		return "", "", "", fmt.Errorf("generate random bytes: %w", err)

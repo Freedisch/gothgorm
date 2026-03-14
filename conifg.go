@@ -14,7 +14,7 @@ type Config struct {
 	SessionSecret    string
 	Providers        []goth.Provider
 	OnLogin          func(user *User, isNew bool, rawToken string)
-	TokenPrefecis    string
+	TokenPrefix      string
 	ResponseHanlders func(w http.ResponseWriter, r *http.Request, user *User, rawToken string)
 }
 
