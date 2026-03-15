@@ -9,6 +9,9 @@ import (
 	"gorm.io/gorm"
 )
 
+// Provider is an alias for goth.Provider so callers don't need to import goth directly.
+type Provider = goth.Provider
+
 type Config struct {
 	DB               *gorm.DB
 	SessionSecret    string
